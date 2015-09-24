@@ -1,0 +1,68 @@
+//
+// Modules -> Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+  text-align: center;
+
+  > li {
+    position: relative;
+    display: block;
+    padding: $nav-link-padding;
+    margin-bottom: 17px;
+    > a {
+      position: relative;
+      font-size: $font-size-medium;
+    }
+    &:hover > a,
+    &:focus > a {
+      color: $nav-link-hover;
+      border-color: $nav-link-hover;
+    }
+  }
+  // Prevent IE8 from misplacing imgs
+  > li > a > img {
+    max-width: none;
+    margin: auto;
+    display: block;
+  }
+}
+
+.nav-inline {
+  > li {
+    display: inline-block;
+    padding: 10px 19px;
+  }
+}
+
+// Justified nav links
+.nav-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+    > a {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+
+
+  @media (min-width: $screen-sm-min) {
+    > li {
+      display: table-cell;
+      width: 1%;
+      > a {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

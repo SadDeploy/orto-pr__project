@@ -1,0 +1,134 @@
+//
+// Partials -> Main
+// ------------------------------------
+
+main {
+  max-height: 1100px;
+  height: 100vh;
+  min-height: 680px;
+  overflow: auto;
+}
+
+.full-content {
+  padding-left: 172px !important;
+  #main {
+    padding: 0;
+  }
+}
+.content {
+  padding: 15px;
+  img {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+#main {
+  padding: 0 60px;
+}
+.news__item {
+  margin-bottom: 45px;
+}
+  .news__main {
+    margin-bottom: 70px;
+  }
+.sitemap__element {
+  margin-bottom: 30px;
+}
+  .sitemap-sub {
+    margin-top: 10px;
+  }
+    .sitemap-sub__element {
+      margin-bottom: 10px;
+    }
+.message {
+  padding: 29px;
+  border-bottom: 1px solid #363636;
+  border-top: 1px solid #363636;
+}
+.archive__link {
+  position: absolute;
+  margin-top: 3.3%;
+}
+.searchbar__link {
+  color: $brand-warning;
+}
+.searchbar__link-active {
+  color: $brand-info;
+}
+.properties__item {
+  padding-top: 30px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #414141;
+  }
+}
+
+// product
+.product {
+  background: #262a2d;
+  max-width: 330px;
+  @include border-radius(10px);
+  .product-img {
+    margin: 0;
+    width: 100%;
+    @include border-radius(10px 10px 0 0);
+  }
+  .badge__new {
+    top: 29%;
+    right: -50px;
+  }
+}
+  .product__desc {
+    padding: 0 20px 13px;
+    position: relative;
+  }
+    .product__desc-model {
+      color: #d6df20;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    .product__desc-title {}
+      .product__desc-prop-title {
+        color: #d6df20;
+        font-weight: 700;
+        line-height: 35px;
+      }
+  .badge__prop {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    max-width: 36px;
+  }
+.product__article {
+  margin-bottom: 5px;
+}
+.product__size-item {
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid #3c3c3c;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  text-align: center;
+  @include border-radius(50%)
+}
+.product__slider, .product__info {
+  width: 76%;
+}
+#carousel li {
+  margin-right: 10px;
+  &.flex-active-slide img {
+    border: 2px solid $brand-primary;
+    @include border-radius()
+  }
+}
+
+.animated-l {
+  left: -200%;
+}
+.animated-r {
+  right: -200%;
+}

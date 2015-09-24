@@ -1,0 +1,18 @@
+header.row
+    .col-xs-12.col-xlg-10.center-block
+        .col-xs-4
+            .row
+                p.header__phone
+                    i.icon-phone
+                    | 8 800 555-73-73
+        .col-xs-4.text--right
+            p.header__cabinet
+                i.icon-key
+                a.non_under(href="3") Вход для диллеров
+        .col-xs-4
+            form.header__search
+                .form-group
+                    input.form-control(type="search", placeholder="Поиск")
+                    input(type="submit", class="icon-search", value="")
+    .clearfix
+    +list('nav nav-inline', 'Новости', 'О торговой марке', 'Условия сотрудничества', 'Обратная связь', 'Где купить')

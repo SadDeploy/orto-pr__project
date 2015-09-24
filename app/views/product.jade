@@ -1,0 +1,132 @@
+extends layouts/_default-product
+
+block content
+    - var title = { description: 'Ограничители на колено' }
+    #main.col-xlg-11.pull-right
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1
+                    b.text--primary BCW 2100&nbsp;
+                    | Пояс корсетный
+                .row
+                    .col-xs-7
+                        .product__article
+                            b.text--info Артикул:&nbsp;
+                            | BCW 2100
+                        .product__size
+                            ul.list-inline
+                                li
+                                    b Размеры:
+                                li.product__size-item S
+                                li.product__size-item M
+                                li.product__size-item L
+                                li.product__size-item XL
+                                li.product__size-item XXL
+                        .product__slider.margbot60
+                             #slider.flexslider
+                                 ul.slides
+                                    - for (var x = 0; x < 10; x++)
+                                        li
+                                            a(class="fancybox" rel="gallery" href="images/product_card.jpg")
+                                                img(src="images/product_card.jpg", alt="")
+                             #carousel.flexslider
+                                 ul.slides
+                                    - for (var x = 0; x < 10; x++)
+                                        li
+                                            a(href="images/product_card.jpg")
+                                                img(src="images/product_card.jpg", alt="")
+                        .product__info
+                            .news__item
+                                p Многофункциональный корсетный пояс на пояснично-крестцовый отдел позвоночника
+                                    | может использоваться также как бандаж на тазовое кольцо, бандаж при опущении почек.
+                                    | Пояс выполнен из уникального материала с содержанием наночастиц бамбукового угля
+                                    | NANO BAMBOO CHARCOAL.
+                            .news__item
+                                h2 Назначение
+                                ul.list-styled
+                                    li умеренная фиксация, стабилизация и разгрузка пояснично-крестцового отдела
+                                        | позвоночника
+                                    li профилактика перенапряжения мышц спины
+                            .news__item
+                                h2 Показания к применению
+                                ul.list-styled
+                                    li профилактика заболеваний поясничного отдела позвоночника при , длительном пребывании в вынужденном статическом положении
+                                    li боли в пояснице, радикулит
+                                    li остеохондроз, артроз межпозвонковых суставов, спондилез
+                                    li последствия операций и травм поясничного отдела позвоночника
+                                    li воспаление мышц спины (миозит)
+                                    li явления гиперподвижности, нестабильности, дисплазии
+                                    li опущение почек (нефроптоз)
+                            .news__item
+                                h2 При использовании в качестве корсетного пояса
+                                p За счет особой конструкции и современных материалов изделие сочетает высокие
+                                    | фиксирующие свойства и терапевтически эффекты бамбука, что позволяет расширить
+                                    | область его применения. Изменение положения эластичных стяжек позволяет
+                                    | сместить акцент фиксации на верхний, средний или нижний поясничный отдел
+                                    | позвоночника.
+                            .news__item
+                                h2 При использовании в качестве бандажа при опущении почек (нефроптозе)
+                                p Фиксация изделия на уровне среднего отдела живота позволяет эффективно
+                                    | перераспределить внутрибрюшное давление и оказать необходимую поддержку
+                                    | опускающимся почкам в физиологически-правильном положении. Эффект сухого
+                                    | тепла, создаваемый материалом NANO BAMBOO CHARCOAL, благотворно влияет
+                                    | на функцию почек и ускоряет процесс выздоровления.
+                    .col-xs-5
+                        h3 Уникальные терапевтические
+                            br
+                            | свойства
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-1.png")
+                            .col-xs-10
+                                a(href="#") Улучшенные качества фиксации
+                                p.font-md и комфорт в использовании изделий обеспечивает
+                                    br
+                                    | новейшая профессиональная система крепления
+                                    br
+                                    | PRO-fix.
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-2.png")
+                            .col-xs-10
+                                a(href="#") Инновационная система FLEXTRA®
+                                p.font-md Волокна Flextra® за счет крестообразного сечения
+                                    br
+                                    | способствуют быстрому впитыванию влаги.
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-3.png")
+                            .col-xs-10
+                                a(href="#") Анатомически правильная посадка
+                                p.font-md Достигается за счет применения в корсете эластичного
+                                    br
+                                    | 3-D полотна объемного плетения.
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-4.png")
+                            .col-xs-10
+                                a(href="#") Уникальные терапевтические эффекты
+                                p.font-md Гипоаллергенность, согревание, гигиена,
+                                    br
+                                    | воздухопроницаемость и гигроскопичность.
+                        .clearfix
+                        .size-table.margtop100.col-xs-10
+                            h3 Таблица подбора размера:
+                            table.table.table-bordered
+                                tbody
+                                    tr.text--info
+                                        td.text--left Размер
+                                        td S
+                                        td M
+                                        td L
+                                        td XL
+                                        td XXL
+                                    tr
+                                        td.text--left.text--info Обхват талии, см
+                                        td.font-sm 70-90
+                                        td.font-sm 80-100
+                                        td.font-sm 90-110
+                                        td.font-sm 100-120
+                                        td.font-sm 110-130
+.clearfix

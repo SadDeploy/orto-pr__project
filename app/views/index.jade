@@ -1,0 +1,49 @@
+extends layouts/_default
+
+block content
+  - var title = { description: 'Типичная страница' }
+  #main
+      .content
+          .properties__item
+              .row
+                  .col-xs-7
+                      h2 ФУНКЦИОНАЛЬНОЕ СОВЕРШЕНСТВО
+                      p Новые технологии и уникальные конструкторские
+                        | решения позволили наделить продукт сверхсвойствами:
+                        | расширить область применения и показания к
+                        | использованию изделий, увеличить в разы их
+                        | медицинскую эффективность.
+                  .col-xs-5
+                      .relative
+                          img(src="images/product-1.png", alt="product")
+                          img.absolute.top-right(src="images/product_mini-1.png", alt="product")
+                          img.absolute.bottom-left(src="images/product_mini-2.png", alt="product")
+          .properties__item
+              .row
+                  .col-xs-5
+                      .relative
+                        img(src="images/product-2.png", alt="product")
+                        img.absolute.bottom-left(src="images/product_mini-3.png", alt="product")
+                  .col-xs-7
+                      h2 ИННОВАЦИОННЫЕ МАТЕРИАЛЫ
+                      p Современные высокотехнологичные материалы
+                        | обеспечивают непревзойденный комфорт в
+                        | использовании и повышают функциональность и
+                        | лечебные качества изделий.
+          .properties__item
+              .row
+                  .col-xs-7
+                      h2 ВЫСОКОЕ КАЧЕСТВО
+                      p Специально разработанная система стандартов
+                        | качества QPS, созданная на основе действующих
+                        | российских, европейских и некоторых мировых
+                        | отраслевых норм и стандартов, а также внутренней
+                        | конструкторской документации, гарантирует, что
+                        | каждое готовое изделие фактически наделено
+                        | качественными характеристиками, способными
+                        | обеспечить безопасное и эффективное применение
+                        | ортезов ORTO PROFESSIONAL.
+                  .col-xs-5
+                      img(src="images/product-3.png", alt="product")
+
+      .clearfix

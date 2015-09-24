@@ -1,0 +1,26 @@
+extends layouts/_default
+
+block content
+    - var title = { description: 'Заголовок новости' }
+    #main
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1= title.description
+                .news__item
+                    p В связи с изменением финансовой ситуации в России и укреплением курса
+                        | российского рубля, группа компаний Малтри сообщает о дифференцированном
+                        | снижении отпускных и рекомендованных розничных цен на продукцию торговых
+                        | марок ORTO и ORTO Professionаl с 20 апреля 2015 года.
+                        br
+                        br
+                        | Мы продолжаем следить за состоянием экономики России и осуществлять
+                        br
+                        | управление отпускными ценами в оперативном режиме.
+                        br
+                        br
+                        | С уважением,
+                        | Группы компаний «Малтри»
+                .margbot40.margtop40
+                    include modules/_pager
+.clearfix

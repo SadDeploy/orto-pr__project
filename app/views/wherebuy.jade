@@ -1,0 +1,38 @@
+extends layouts/_default
+
+block content
+    - var title = { description: 'Где купить' }
+    #main
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1= title.description
+                form.col-xs-12.col-xlg-9
+                    .row
+                        .form-group.clearfix
+                            .col-xs-3
+                                .row
+                                    label Выберите город:
+                            .col-xs-9
+                                select.form-control
+                                    option Выберите город
+                                    option Вопросы 1
+                                    option Вопросы 2
+                                    option Вопросы 3
+                        .form-group.clearfix
+                            .col-xs-3
+                                .row
+                                    label Выберите район:
+                            .col-xs-9
+                                select.form-control
+                                    option Выберите район
+                                    option Вопросы 1
+                                    option Вопросы 2
+                                    option Вопросы 3
+                        .form-group.clearfix.margtop40
+                            .col-xs-3
+                                .row &nbsp;
+                            .col-xs-3
+                                button(type="submit").btn--primary.btn Найти
+                .clearfix
+.clearfix

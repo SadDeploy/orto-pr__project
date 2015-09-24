@@ -1,0 +1,14 @@
+.text--center
+    if title.description == 'Новости'
+        .archive__link
+            a(href="#") Архив новостей
+    ul.pagination
+        li
+            a(href='#') <
+        li.active
+            a(href='#') 1
+        - for (var x = 2; x < 6; x++)
+            li
+                a(href='#')= x
+        li
+            a(href='#') >

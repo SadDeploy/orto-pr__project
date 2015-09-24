@@ -1,0 +1,60 @@
+//
+// Modules -> Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  padding-left: 0;
+  margin: $line-height-computed 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix;
+  li {
+    display: inline;
+    > a,
+    > span {
+      display: inline-block;
+      padding: 0 5px;
+      line-height: 1.1;
+      color: $gray;
+      border-bottom: 1px solid $pager-border;
+    }
+
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      color: $pager-active-color;
+      border-color: $pager-active-border;
+    }
+  }
+
+  .next {
+    > a,
+    > span {
+      float: right;
+      &:first-child {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .previous {
+    > a,
+    > span {
+      float: left;
+      &:first-child {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      color: $pager-disabled-color;
+      cursor: $cursor-disabled;
+    }
+  }
+}

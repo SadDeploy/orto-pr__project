@@ -1,0 +1,60 @@
+//
+// Modules -> Utility classes
+// --------------------------------------------------
+
+
+// Floats
+.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.top-left {
+  top: 4%;
+  left: -11%;
+}
+.bottom-left {
+  bottom: 8%;
+  left: -11%;
+}
+.top-right {
+  top: 4%;
+  right: -5%;
+}
+.bottom-right {
+  bottom: 8%;
+  right: -5%;
+}
+
+// Hide from screenreaders and browsers
+.hidden {
+  display: none !important;
+}

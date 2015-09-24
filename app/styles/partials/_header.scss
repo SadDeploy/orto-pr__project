@@ -1,0 +1,66 @@
+//
+// Partials -> Header
+// ------------------------------------
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?42534951');
+  src: url('../fonts/fontello.eot?42534951#iefix') format('embedded-opentype'),
+  url('../fonts/fontello.woff?42534951') format('woff'),
+  url('../fonts/fontello.ttf?42534951') format('truetype'),
+  url('../fonts/fontello.svg?42534951#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+.icon-key:before { content: '\e803'; } /* '' */
+
+
+header {
+  border-bottom: 1px solid #414141;
+  padding-top: 25px;
+}
+.header__phone {
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 3px 0;
+}
+
+.header__search {
+  position: relative;
+  & [type=submit] {
+    @include border-radius(50%);
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    z-index: 3;
+    border: 0;
+    color: $brand-info;
+    background: url("../images/search.png") no-repeat center;
+    background-color: #52515b;
+    &:hover {
+      background-color: darken(#52515b, 11%);
+    }
+  }
+}

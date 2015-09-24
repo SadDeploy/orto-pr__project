@@ -1,0 +1,11 @@
+// mixin
+
+mixin list(classUl, ...items)
+    ul(class=classUl)
+        each item in items
+            li.nav__element
+                a(href="#").nav__element-item= item
+
+
+mixin link(title, href, text)
+    a(href=href ? href : '#', class="nav__element-item", title!= title ? title : text)&attributes(attributes)!= text ? text : title

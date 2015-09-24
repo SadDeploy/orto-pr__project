@@ -1,0 +1,32 @@
+extends layouts/_default
+
+block content
+    - var title = { description: 'Поиск' }
+    #main
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1= title.description
+                .input-group.col-xs-6
+                    input(type="text", class="form-control", placeholder="Поиск")
+                    .input-group-btn
+                        button.btn.btn--primary Найти
+                .clearfix
+                p.font-lg.margtop20.margbot30 Вы ввели&nbsp;
+                    span.text--info Пояс.&nbsp;
+                    | Было найдено:&nbsp;
+                    span.text--info 9
+                ul.list-styled.searchbar
+                    - for (var x = 1; x < 4; x++)
+                        li.searchbar__item
+                            a.searchbar__link(href="#") Корсетные&nbsp;
+                                span.searchbar__link-active пояса
+                        li.searchbar__item
+                            a.searchbar__link(href="#") BCW 2100&nbsp;
+                                span.searchbar__link-active пояс&nbsp;
+                                | корсетный
+                        li.searchbar__item
+                            a.searchbar__link(href="#") BCW 2200&nbsp;
+                                span.searchbar__link-active пояс&nbsp;
+                                | корсетный
+.clearfix

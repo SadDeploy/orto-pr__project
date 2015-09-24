@@ -1,0 +1,68 @@
+extends layouts/_default-product
+
+block content
+    - var title = { description: 'Ограничители на колено' }
+    #main.col-xlg-11.pull-right
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1= title.description
+                .row
+                    .col-xs-7
+                        - for (var x = 1; x < 5; x++)
+                            .col-xs-6
+                                .product.margbot70
+                                    img.product-img(src="images/item.jpg", alt="")
+                                    .product__desc
+                                        h4.product__desc-model ВСК 200
+                                            .badge__new new
+                                        .badge__prop
+                                            img(src="images/ico-2.png", alt="")
+                                        h5.product__desc-title Бандаж на коленный сустав
+                                        .product__desc-prop
+                                            span.product__desc-prop-title Назначение:
+                                            ul.list-styled.font-md
+                                                li легкая фиксация, стабилизация и
+                                                    | разгрузка капсульно­связочного
+                                                    | аппарата
+                                                li компрессия, микромассаж,
+                                                    | согревание
+                    .col-xs-5
+                        h3 Уникальные терапевтические
+                            br
+                            | свойства
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-1.png")
+                            .col-xs-10
+                                a(href="#") Улучшенные качества фиксации
+                                p.font-md и комфорт в использовании изделий обеспечивает
+                                    br
+                                    | новейшая профессиональная система крепления
+                                    br
+                                    | PRO-fix.
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-2.png")
+                            .col-xs-10
+                                a(href="#") Инновационная система FLEXTRA®
+                                p.font-md Волокна Flextra® за счет крестообразного сечения
+                                    br
+                                    | способствуют быстрому впитыванию влаги.
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-3.png")
+                            .col-xs-10
+                                a(href="#") Анатомически правильная посадка
+                                p.font-md Достигается за счет применения в корсете эластичного
+                                    br
+                                    | 3-D полотна объемного плетения.
+                        .margbot40
+                            .pull-left
+                                img(src="images/ico-4.png")
+                            .col-xs-10
+                                a(href="#") Уникальные терапевтические эффекты
+                                p.font-md Гипоаллергенность, согревание, гигиена,
+                                    br
+                                    | воздухопроницаемость и гигроскопичность.
+.clearfix

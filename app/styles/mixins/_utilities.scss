@@ -1,0 +1,62 @@
+//
+// Mixins -> Utilities
+// ------------------------------------
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+@mixin text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+//mixins
+@mixin padtopbot($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+@mixin padtop($top) {
+  padding-top: $top;
+}
+@mixin padbot($bottom) {
+  padding-bottom: $bottom;
+}
+@mixin margright($right) {
+  margin-right: $right;
+}
+@mixin margbot($bottom) {
+  margin-bottom: $bottom;
+}
+@mixin margtop($top) {
+  margin-top: $top;
+}
+
+$i: 0;
+@while $i < 101 {
+.padtopbot#{$i} {
+@include padtopbot(1px * $i, 1px * $i);
+}
+.padtop#{$i} {
+@include padtop(1px * $i);
+}
+.padbot#{$i} {
+@include padbot(1px * $i);
+}
+.margright#{$i} {
+@include margright(1px * $i);
+}
+.margbot#{$i} {
+@include margbot(1px * $i);
+}
+.margtop#{$i} {
+@include margtop(1px * $i);
+}
+  $i: $i + 10;
+}

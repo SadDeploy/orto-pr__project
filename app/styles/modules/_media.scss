@@ -1,0 +1,42 @@
+//
+// Modules -> Media
+// --------------------------------------------------
+
+
+@media (max-height: 900px) {
+  .subnav {
+    overflow: auto;
+    .nav__element {
+      padding: 5px 5px;
+    }
+    .nav__element-img {
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 1px;
+    }
+  }
+}
+@media (max-height: 730px) {
+  .bottom-social, .nav__element {
+    margin-bottom: 10px;}
+}
+@media (max-height: 680px) {
+  aside {
+    overflow: visible;}
+  .background__item, .round {
+    overflow: hidden;
+    max-height: 680px;
+  }
+}
+@media (max-width: 1440px) {
+  #main, footer {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1565px) {
+  .nav-inline {
+    > li {
+      padding: 10px 23px;
+    }
+  }
+}

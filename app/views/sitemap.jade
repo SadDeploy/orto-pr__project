@@ -1,0 +1,35 @@
+extends layouts/_default
+
+block content
+    - var title = { description: 'Карта сайта' }
+    #main
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1= title.description
+                ul.list-unstyled.sitemap
+                    li.sitemap__element
+                        a.text--danger(href="#") Главная страница
+                        ul.sitemap-sub
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") О компании
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") Вакансии
+                    li.sitemap__element
+                        a.text--danger(href="#") Главная страница
+                        ul.sitemap-sub
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") Категория 1
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") Категория 2
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") Категория 1
+                    li.sitemap__element
+                        a.text--danger(href="#") Главная страница
+                        ul.sitemap-sub
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") О компании
+                            li.sitemap-sub__element
+                                a.text--danger(href="#") Вакансии
+
+.clearfix

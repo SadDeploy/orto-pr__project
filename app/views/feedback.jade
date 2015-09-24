@@ -1,0 +1,76 @@
+extends layouts/_default
+
+block content
+    - var title = { description: 'Обратная связь' }
+    #main
+        include modules/_breadcrumbs
+        section.content
+            .news__main
+                h1= title.description
+                form.col-xs-12.col-xlg-9
+                    .row
+                        .form-group.clearfix
+                             p.text--warning Пожалуйста, заполните форму.
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label ФИО
+                                    sup *
+                                    | :
+                            .col-xs-9
+                                input.form-control(type="text", required)
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label Организация:
+                            .col-xs-9
+                                input.form-control(type="text")
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label Телефон
+                                    sup *
+                                    | :
+                            .col-xs-9
+                                input.form-control.validate-phone(type="text", required)
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label Е-mail
+                                    sup *
+                                    | :
+                            .col-xs-9
+                                input.form-control(type="email", required)
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label Тема
+                                    sup *
+                                    | :
+                            .col-xs-9
+                                select.form-control(required)
+                                    option Общие вопросы
+                                    option Вопросы 1
+                                    option Вопросы 2
+                                    option Вопросы 3
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label Сообщение
+                                    sup *
+                                    | :
+                            .col-xs-9
+                                textarea.form-control(required)
+                        .form-group.clearfix
+                            .col-xs-3.row &nbsp;
+                            .col-xs-9
+                                p.font-sm.text--warning Поля, отмеченные
+                                    sup *
+                                    | обязательны к заполнению
+                        .form-group.clearfix
+                            .col-xs-3.row.text--right
+                                label.margtop0 Введите код на картинке:
+                            .col-xs-4
+                                input.form-control(type="text", required)
+                            .col-xs-3
+                                img(src="images/capcha.jpg")
+                        .form-group.clearfix
+                            .col-xs-3.row &nbsp;
+                            .col-xs-3
+                                button(type="submit").btn--primary.btn Отправить
+                .clearfix
+.clearfix
