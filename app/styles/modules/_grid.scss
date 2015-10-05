@@ -7,8 +7,7 @@ $use-adaprive:              false!default;
 
 // Container widths
 .container {
-  //@include container-fixed;
-  @include box-sizing();
+  @include container-fixed;
   @if $use-adaprive == true {
     @media (min-width: $screen-sm-min) {
       width: $container-sm;
@@ -24,7 +23,7 @@ $use-adaprive:              false!default;
     }
   } @else {
     width: $container-xlg;
-    min-width: 1280px;
+    min-width: $container-lg;
   }
 }
 
@@ -65,6 +64,7 @@ $use-adaprive:              false!default;
   @include make-grid(xs);
 
 
+@if $use-adaprive == true {
   // Small grid
   @media (min-width: $screen-sm-min) {
     @include make-grid(sm);
@@ -84,3 +84,4 @@ $use-adaprive:              false!default;
   @media (min-width: $screen-xlg-min) {
     @include make-grid(xlg);
   }
+}

@@ -23,15 +23,23 @@ aside {
 nav {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -172px;
   bottom: 0;
   z-index: 10;
   width: 172px;
   height: 100%;
   background: #1a1a1a;
+  //& > .logo, & > .nav, & > .bottom {background: #1a1a1a;}
+}
+.black {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: #1a1a1a;
+  top: 0;
 }
 .nav__element.nav__element-sub {
-
   &:hover:before {
     content: "";
     position: absolute;
@@ -59,13 +67,15 @@ nav {
 .bottom-social {
   margin-bottom: 70px;}
 .subnav {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
-  left: 172px;
+  left: -174px;
   height: 100%;
   background: #394045;
   max-width: 174px;
+  z-index: -1;
+  @include transition(all 0.5s ease-in-out);
   .nav__element {
     margin-bottom: 7px;
   }
@@ -80,7 +90,8 @@ nav {
       animation: anim-rotate 1.5s linear;
     }
     > .subnav {
-      display: block;
+      @include transition(all 0.5s ease-in-out);
+      left: 172px;
     }
   }
   /*.height {

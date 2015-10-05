@@ -33,8 +33,8 @@ $(window).load(function() {
 // animated blocks
     $(function() {
         $('.animated').each(function(i) {
-            $(this).delay((i++) * 1000).animate({left: "0"}, 500)
-                .parents().find('.animated-r').delay((i++) * 500).animate({right: "0"}, 500);
+            $(this).delay((i++) * 500).animate({left: "0"}, 500)
+                .parents().find('.animated-r').delay((i++) * 1000).animate({right: "0"}, 500);
         })
     });
 

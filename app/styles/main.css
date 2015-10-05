@@ -2106,12 +2106,20 @@ aside {
 nav {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -172px;
   bottom: 0;
   z-index: 10;
   width: 172px;
   height: 100%;
   background: #1a1a1a; }
+
+.black {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: #1a1a1a;
+  top: 0; }
 
 .nav__element.nav__element-sub:hover:before {
   content: "";
@@ -2145,13 +2153,17 @@ nav {
   margin-bottom: 70px; }
 
 .subnav {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
-  left: 172px;
+  left: -174px;
   height: 100%;
   background: #394045;
-  max-width: 174px; }
+  max-width: 174px;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   .subnav .nav__element {
     margin-bottom: 7px; }
   .subnav .nav__element-img {
@@ -2162,7 +2174,10 @@ nav {
   -webkit-animation: anim-rotate 1.5s linear;
   animation: anim-rotate 1.5s linear; }
 .nav__element:hover > .subnav {
-  display: block; }
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  left: 172px; }
 
 /*.height {
   height: 1000%;
@@ -2295,6 +2310,15 @@ main {
 #main {
   padding: 0 60px; }
 
+.news--data {
+  font-family: "Roboto", sans-serif;
+  margin: 0 !important;
+  color: #8b8b8b;
+  font-size: 13px; }
+
+.news--title {
+  margin-top: 4px; }
+
 .news__item {
   margin-bottom: 45px; }
 
@@ -2330,7 +2354,12 @@ main {
   .properties__item:not(:last-child) {
     border-bottom: 1px solid #414141; }
 
+.properties-img:hover {
+  -webkit-animation: anim-rotate 1.5s linear;
+  animation: anim-rotate 1.5s linear; }
+
 .product {
+  cursor: pointer;
   background: #262a2d;
   max-width: 330px;
   -webkit-border-radius: 10px;
@@ -2357,14 +2386,12 @@ main {
   position: relative; }
 
 .product__desc-model {
-  color: #d6df20;
   font-weight: 700;
   position: relative;
   display: inline-block;
   margin-bottom: 0; }
 
 .product__desc-prop-title {
-  color: #d6df20;
   font-weight: 700;
   line-height: 35px; }
 
@@ -2398,7 +2425,6 @@ main {
 #carousel li {
   margin-right: 10px; }
   #carousel li.flex-active-slide img {
-    border: 2px solid #ea1783;
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -2412,6 +2438,16 @@ main {
 .animated-r {
   right: -200%; }
 
+.error--page {
+  margin-top: 175px;
+  margin-bottom: 175px; }
+  .error--page h1 {
+    font-size: 120px;
+    line-height: 40px; }
+  .error--page h2 {
+    font-size: 20px;
+    line-height: 52px; }
+
 footer {
   padding: 20px 60px; }
 
@@ -2420,6 +2456,39 @@ footer {
   font-size: 12px;
   font-weight: 300;
   color: #606060; }
+
+.insole .nav__element:hover .nav__element-item, .insole .nav__element:hover .nav__element-item:hover {
+  color: #b0a481;
+  border-color: #b0a481; }
+.insole .product:hover {
+  border-color: #b0a481;
+  box-shadow: 0 0 8.7px 1.3px #b0a481; }
+.insole .product--article, .insole .product__desc-prop-title, .insole .product__desc-model {
+  color: #b0a481; }
+.insole #carousel li.flex-active-slide img {
+  border: 2px solid #b0a481; }
+
+.bandage .nav__element:hover .nav__element-item, .bandage .nav__element:hover .nav__element-item:hover {
+  color: #03bbf1;
+  border-color: #03bbf1; }
+.bandage .product:hover {
+  border-color: #03bbf1;
+  box-shadow: 0 0 8.7px 1.3px #03bbf1; }
+.bandage .product--article, .bandage .product__desc-prop-title, .bandage .product__desc-model {
+  color: #03bbf1; }
+.bandage #carousel li.flex-active-slide img {
+  border: 2px solid #03bbf1; }
+
+.brace .nav__element:hover .nav__element-item, .brace .nav__element:hover .nav__element-item:hover {
+  color: #d6df20;
+  border-color: #d6df20; }
+.brace .product:hover {
+  border-color: #d6df20;
+  box-shadow: 0 0 8.7px 1.3px #d6df20; }
+.brace .product--article, .brace .product__desc-prop-title, .brace .product__desc-model {
+  color: #d6df20; }
+.brace #carousel li.flex-active-slide img {
+  border: 2px solid #d6df20; }
 
 @media (max-height: 900px) {
   .subnav {
